@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카운트다운</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 50px 0px;
+        background: #90cbf3;
+        font-family: sans-serif;
+        font-weight: lighter;
+      }
+
+      #countdown {
+        color: rgb(83, 83, 83);
+        font-size: 50px;
+        background-color: rgb(140, 120, 253);
+        width: 380px;
+      }
+
+      #timer {
+        font-size: 3em;
+        font-weight: 100;
+        color: white;
+        padding: 20px;
+        width: 700px;
+        color: white;
+      }
+
+      #timer div {
+        display: inline-block;
+        min-width: 90px;
+        padding: 15px;
+        background: #020b43;
+        border-radius: 10px;
+        border: 2px solid #030d52;
+        margin: 15px;
+      }
+
+      #timer div span {
+        color: #ffffff;
+        display: block;
+        margin-top: 15px;
+        font-size: 0.35em;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="countdown"></div>
+    <!-- <div id="timer"></div> -->
+    <script>
+      // <!-- -----------------카운트다운------------------------- -->
+      // 종료 시간 설정 (24시간 형식)
+      const endTime = '18:00:';
+
+      function updateCountdown() {
+        const now = new Date();
+        const end = new Date();
+
+        // 오늘의 종료 시간 설정
+        const [hours, minutes, seconds] = endTime.split(':');
+        end.setHours(hours, minutes, seconds);
+
+        // 남은 시간 계산
+        const timeDiff = end - now;
+
+        // 시, 분, 초 계산
+        const hoursRemaining = Math.floor(timeDiff / (1000 * 60 * 60));
+        const minutesRemaining = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+        const secondsRemaining = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+        // HTML 업데이트
+        document.getElementById(
+          'countdown'
+        ).innerHTML = `${hoursRemaining}시간 ${minutesRemaining}분 ${secondsRemaining}초`;
+      }
+
+      // 매 초마다 업데이트
+      setInterval(updateCountdown, 1000);
+
+      // 초기 로딩 시 업데이트
+      updateCountdown();
+      // <!-- ----------------------------------------------------------- -->
+    </script>
+
+    <script>
+      function updateTimer() {
+        const future = Date.parse('2024/01/16 09:30:00');
+        const now = new Date();
+        const diff = future - now;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const mins = Math.floor(diff / (1000 * 60));
+        const secs = Math.floor(diff / 1000);
+
+        const d = days;
+        const h = hours - days * 24;
+        const m = mins - hours * 60;
+        const s = secs - mins * 60;
+        document.getElementById('timer').innerHTML =
+          '<div>' +
+          d +
+          '<span>Days</span></div>' +
+          '<div>' +
+          h +
+          '<span>Hours</span></div>' +
+          '<div>' +
+          m +
+          '<span>Minutes</span></div>' +
+          '<div>' +
+          s +
+          '<span>Seconds</span></div>';
+      }
+
+      setInterval(updateTimer, 1000);
+    </script>
+  </body>
+</html>

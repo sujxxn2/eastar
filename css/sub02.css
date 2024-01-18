@@ -1,0 +1,436 @@
+@charset "UTF-8";
+
+*{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style:none;
+}
+a{
+    color:#000;
+    text-decoration:none;
+}
+img{
+    vertical-align:top;
+    border:0;
+}
+.clearfix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing:-1px;
+}
+
+/* #header CSS */
+#header .inner_wrap{
+    width:100%;
+    height:120px;
+    overflow:hidden;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:#fff;
+    border-bottom:1px solid #dfdfdf;
+    z-index:10;
+    transition:all 0.4s;
+}
+#header .inner_wrap:hover{
+    height:480px;
+}
+/* #header .inner_wrap .inner CSS */
+#header .inner_wrap .inner{
+    width:1800px; margin:0px auto;
+    height:120px;
+    position:relative;
+}
+/* #header .inner_wrap .inner .logo CSS */
+#header .inner_wrap .inner .logo{
+    text-indent:-99999px;
+    width:171px;
+    height:37px;
+    background:url("../images/header/logo.png") no-repeat center / 100%;
+    position:absolute;
+    left:0;
+    top:35px;
+    cursor:pointer;
+}
+/* #header .inner_wrap .inner .gnb CSS */
+#header .inner_wrap .inner .gnb{
+    width:820px;
+    height:120px;
+    position:absolute;
+    left:50%;
+    transform:translateX(-410px);
+    top:0;
+}
+#header .inner_wrap .inner .gnb>li{
+    width:145px;
+    margin:0px 5px;
+    float:left;
+    text-align:center;
+    line-height:120px;
+}
+#header .inner_wrap .inner .gnb>li:nth-child(4){
+    width:190px;
+}
+#header .inner_wrap .inner .gnb>li>a{
+    font-size:19px;
+    font-weight:500;
+    color:#222;
+    position:relative;
+}
+#header .inner_wrap .inner .gnb>li>a:after{
+    content:"";
+    display:block;
+    position:absolute;
+    width:0%;
+    left:50%;
+    top:55px;
+    transition:all 0.3s;
+}
+#header .inner_wrap .inner .gnb>li:hover>a:after{
+    width:100%;
+    left:0%;
+    height:3px;
+    background-color:#D11F26;
+}
+#header .inner_wrap .inner .gnb>li:hover>a{
+    color:#D11F26;
+    font-weight:600;
+}
+/* #header .inner_wrap .inner .gnb>li .sub CSS */
+#header .inner_wrap .inner .gnb>li .sub>li>a{
+    display:block;
+    line-height:50px;
+    font-size:17px;
+    color:#222;
+}
+#header .inner_wrap .inner .gnb>li .sub>li:hover>a{
+    color:#D11F26;
+    font-weight:500;
+}
+/* #header .inner_wrap .inner .etc CSS */
+#header .inner_wrap .inner .etc{
+    position:absolute;
+    right:0;
+    top:45px;
+}
+#header .inner_wrap .inner .etc>li{
+    float:left;
+}
+#header .inner_wrap .inner .etc>li:nth-child(2n+1){
+    text-indent:-99999px;
+}
+#header .inner_wrap .inner .etc>li:nth-child(2){
+    margin:0px 20px;
+    width:106px;
+    height:36px;
+    border-radius:20px;
+    border:2px solid #222;
+    line-height:36px;
+    text-align:center;
+}
+#header .inner_wrap .inner .etc>li:nth-child(2):hover{
+    border:2px solid #D11F26;
+}
+/* #header .inner_wrap .inner .etc>li>a CSS */
+#header .inner_wrap .inner .etc>li>a{
+    display:block;
+    color:#222;
+    font-weight:600;
+}
+#header .inner_wrap .inner .etc>li:nth-child(1)>a{
+    width:36px;
+    height:36px;
+    background:url("../images/header/btn_search_bk.png") no-repeat center / 31px 31px;
+}
+#header .inner_wrap .inner .etc>li:nth-child(1):hover>a{
+    background:url("../images/header/btn_search_hover.png") no-repeat center / 31px 31px;
+}
+#header .inner_wrap .inner .etc>li:nth-child(2):hover>a{
+    color:#D11F26;
+    font-weight:700;
+}
+#header .inner_wrap .inner .etc>li:nth-child(3)>a{
+    width:36px;
+    height:36px;
+    background:url("../images/header/btn_menu_bk.png") no-repeat center / 31px 26px;
+}
+#header .inner_wrap .inner .etc>li:nth-child(3):hover>a{
+    background:url("../images/header/btn_menu_hover.png") no-repeat center / 31px 26px;
+}
+/* #section CSS */
+#section{
+    width:100%;
+    height:100vh;
+    position:relative;
+}
+/* #section .reserve CSS */
+#section .reserve{
+    width:401px;
+    height:537px;
+    position:absolute;
+    left:50%; margin-left:-200px;
+    top:240px;
+    box-sizing:border-box;
+}
+#section .reserve .reserve_txt>h1{
+    font-size:52px;
+    text-align: center;
+    color:#111;
+}
+#section .reserve .reserve_txt>p{
+    text-align:center;
+    margin-top:25px;
+    margin-bottom:60px;
+    font-size:18px;
+    color:#444;
+}
+
+/* #section .reserve .logintap CSS */
+#section .reserve .logintap{
+    margin-bottom:25px;
+}
+#section .reserve .logintap>li{
+    float: left;
+    width:200px;
+    height:48px;
+    background-color:#666;
+    color:#fff;
+    cursor:pointer;
+    /* display:none; */
+}
+#section .reserve .logintap>li.loginOn{
+    background-color:#fff;
+    border-left:1px solid #333;
+    border-top:1px solid #333;
+    color:#222;
+    display:block;
+}
+#section .reserve .logintap>li.loginOn:nth-child(2){
+    border-right:1px solid #333;
+    border-top:1px solid #333;
+    border-left:0;
+}
+#section .reserve .logintap>li.loginOn>p:before{
+    content:"";
+    display:inline-block;
+    width:15px;
+    height:12px;
+    margin-right:7px;
+    background:url("../images/sub/sub02/check_icon.png") no-repeat center / 100%;
+}
+#section .reserve .logintap>li>p{
+    font-size:14px;
+    font-weight:600;
+    text-align:center;
+    line-height:48px;
+}
+/* #section .reserve .loginconts CSS */
+/* #section .reserve .loginconts>li .sec01 CSS */
+
+#section .reserve .loginconts>li{
+    display:none;
+}
+#section .reserve .loginconts>li.logincontsOn{
+    display:block;
+}
+#section .reserve .loginconts>li .sec01>span{
+    font-size:14px;
+    margin-left:10px;
+    margin-right:20px;
+    color:#666;
+}
+/* #section .reserve .loginconts>li .sec02 CSS */
+#section .reserve .loginconts>li .sec02{
+    margin-top:20px;
+    padding-bottom:20px;
+    border-bottom:1px solid #dfdfdf;
+}
+#section .reserve .loginconts>li:nth-child(2) .sec02{
+    border:0;
+}
+#section .reserve .loginconts>li .sec02 .formcontrol{
+    width:386px;
+    height:36px;
+    outline:none;
+    border:none;
+    border-bottom:1px solid #dfdfdf;
+    background-color:#efefef;
+    padding-left:15px;
+    margin-bottom:10px;
+    font-size:13px;
+    font-family:'Noto Sans KR';
+    color:#999;
+}
+#section .reserve .loginconts>li .sec02>span{
+    margin-left:10px;
+    font-size:14px;
+}
+#section .reserve .loginconts>li .sec02>p{
+    width:400px;
+    height:48px;
+    line-height:48px;
+    margin-top:20px;
+    border-radius:5px;
+    background-color:#D11F26;
+    color:#fff;
+    text-align:center;
+    cursor:pointer;
+}
+/* #section .reserve .loginconts>li .sec03 CSS */
+#section .reserve .loginconts>li .sec03{
+    margin-top:17px;
+    cursor:pointer;
+}
+#section .reserve .loginconts>li .sec03>p{
+    display:inline-block;
+    font-size:13px;
+    margin-right:18px;
+}
+#section .reserve .loginconts>li .sec03>p.join{
+    width:87px;
+    height:35px;
+    margin-left:60px;
+    margin-right:0px;
+    text-align:center;
+    line-height:35px;
+    border-radius:5px;
+    background-color:#666;
+    color:#fff;
+}
+
+
+
+/* #footer CSS */
+#footer{
+    width:100%;
+    height:450px;
+    background-color:#3c3c3c;
+}
+#footer .footer_wrap{
+    width:1280px;
+    margin:0px auto;
+}
+/* #footer .footer_wrap .info CSS */
+#footer .footer_wrap .info{
+    padding-top:90px;
+    padding-bottom:35px;
+    display:flex;
+    justify-content:center;
+    border-bottom:1px solid #dfdfdf30;
+}
+#footer .footer_wrap .info>li{
+    text-align:center;
+}
+#footer .footer_wrap .info>li>a{
+    color:#efefef;
+    font-size:16px;
+    font-weight:200;
+}
+#footer .footer_wrap .info>li:after{
+    content:"";
+    display:inline-block;
+    width:1px;
+    height:13px;
+    margin:0px 20px;
+    background-color:#dfdfdf30;
+}
+#footer .footer_wrap .info>li:last-child:after{
+    display:none;
+}
+/* #footer .footer_wrap .footerlogo CSS */
+#footer .footer_wrap .other{
+    padding:0px 65px;
+    padding-top:35px;
+    padding-bottom:47px;
+    box-sizing:border-box;
+}
+#footer .footer_wrap .other>li{
+    color:#efefef;
+    float:left;
+    width:240px;
+    margin-right:115px;
+    letter-spacing:0px;
+}
+#footer .footer_wrap .other>li>p{
+    position:relative;
+    top:-25px;
+    left:100px;
+}
+#footer .footer_wrap .other>li>p>span{
+    display:block;
+    font-size:14px;
+    font-weight:300;
+}
+
+/* #footer .footer_wrap .other>li:nth-child(1) CSS */
+#footer .footer_wrap .other>li:nth-child(1){
+    width:150px;
+    margin-right:50px;
+}
+#footer .footer_wrap .other>li .footerlogo{
+    text-indent:-99999px;
+    width:149px;
+    height:55px;
+    margin-top:-6px;
+    background:url("../images/footer/logo_white.png") no-repeat center / 100%;
+}
+
+/* #footer .footer_wrap .other>li:nth-child(2) CSS */
+#footer .footer_wrap .other>li:nth-child(2)>p>span:first-child{
+    font-size:18px;
+    font-weight:500;
+}
+/* #footer .footer_wrap .other>li:last-child CSS */
+#footer .footer_wrap .other>li:last-child{
+    margin-right:0px;
+}
+#footer .footer_wrap .other>li:last-child>p{
+    left:145px;
+}
+#footer .footer_wrap .other>li:last-child>p>span{
+    display:inline-block;
+    text-indent:-99999px;
+    width:30px;
+    height:30px;
+    cursor:pointer;
+}
+#footer .footer_wrap .other>li:last-child>p>span:first-child{
+    background:url("../images/footer/icon_youtube.png") no-repeat center / 26px 18px;
+}
+#footer .footer_wrap .other>li:last-child>p>span:nth-child(2){
+    background:url("../images/footer/icon_facebook.png") no-repeat center / 25px 25px;
+}
+#footer .footer_wrap .other>li:last-child>p>span:last-child{
+    background:url("../images/footer/icon_twitter.png") no-repeat center / 22px 19px;
+}
+/* #footer .footer_wrap .company CSS */
+#footer .footer_wrap .company{
+    width:752px;
+    margin:0px auto;
+}
+#footer .footer_wrap .company>li{
+    float:left;
+    color:#dfdfdf;
+    font-weight:300;
+    line-height:28px;
+    letter-spacing:0px;
+}
+#footer .footer_wrap .company>li:before{
+    content:"";
+    display:inline-block;
+    width:1px;
+    height:13px;
+    margin:0px 5px;
+    background-color:#dfdfdf30;
+}
+#footer .footer_wrap .company>li:nth-child(-n+2):before,
+#footer .footer_wrap .company>li:nth-child(5):before,
+#footer .footer_wrap .company>li:nth-child(8):before{
+    display:none;
+}
