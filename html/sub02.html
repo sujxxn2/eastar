@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 | 이스타항공</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/sub02.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/sub02.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="inner_wrap">
+          <div class="inner">
+              <a href="../index.html"><h1 class="logo">logo</h1></a>
+              <ul class="gnb clearFix">
+                <li>
+                  <a href="../html/sub01.html">예약</a>
+                  <ul class="sub">
+                    <li><a href="#">항공권 예매</a></li>
+                    <li><a href="#">출도착 조회</a></li>
+                    <li><a href="#">예약/운임/수수료안내</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../html/sub02.html">나의 예약</a>
+                  <ul class="sub">
+                    <li><a href="#">온라인 체크인</a></li>
+                    <li><a href="#">예약 조회/변경/환불</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../html/sub03.html">서비스 안내</a>
+                  <ul class="sub">
+                    <li><a href="#">공항 서비스</a></li>
+                    <li><a href="#">기내 서비스</a></li>
+                    <li><a href="#">수하물 안내</a></li>
+                    <li><a href="#">탑승 절차</a></li>
+                    <li><a href="#">출입국 규정 안내</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../html/sub04.html">도움이 필요한 고객</a>
+                  <ul class="sub">
+                    <li><a href="#">한가족 서비스</a></li>
+                    <li><a href="#">유아 동반 승객</a></li>
+                    <li><a href="#">혼자 여행하는 어린이</a></li>
+                    <li><a href="#">몸이 불편한 승객</a></li>
+                    <li><a href="#">임신 중인 고객</a></li>
+                    <li><a href="#">반려동물 동반 승객</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../html/sub05.html">이벤트</a>
+                  <ul class="sub">
+                    <li><a href="#">진행중인 이벤트</a></li>
+                    <li><a href="#">종료된 이벤트</a></li>
+                    <li><a href="#">당첨자 발표</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="etc clearFix">
+                <li><a href="#">search</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">menu</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    <div id="section">
+        <div class="reserve">
+            <div class="reserve_txt">
+                <h1>나의 예약</h1>
+                <p>로그인하시고 각종 회원 혜택을 받아 보세요.</p>
+            </div>
+            <ul class="logintap clearfix">
+                <li class="loginOn">
+                    <p>로그인</p>
+                </li>
+                <li>
+                    <p>비로그인 예약조회</p>
+                </li>
+            </ul>
+            <ul class="loginconts">
+                <li class="logincontsOn">
+                    <div class="sec01">
+                        <input type="radio" name="na" checked><span>아이디 로그인</span>
+                        <input type="radio" name="na"><span>회원번호 로그인</span>
+                    </div>
+                    <div class="sec02">
+                        <input class="formcontrol" type="text" placeholder="아이디 입력">
+                        <input class="formcontrol" type="password" placeholder="비밀번호 입력">
+                        <input type="checkbox" name="save"><span>아이디 저장</span>
+                        <p class="loginbtn">로그인</p>
+                    </div>
+                    <div class="sec03">
+                        <p>아이디 찾기</p>
+                        <p>회원번호 찾기</p>
+                        <p>비밀번호 찾기</p>
+                        <p class="join">회원가입</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="sec02">
+                        <input class="formcontrol" type="text" placeholder="예약번호 입력 ex&#41;PCWLGH">
+                        <input class="formcontrol" type="text" placeholder="탑승일 선택">
+                        <input class="formcontrol" type="text" placeholder="출발지 선택">
+                        <input class="formcontrol" type="text" placeholder="도착지 선택">
+                        <input class="formcontrol" type="text" placeholder="예약 시 입력한 영문/국문 성(Last Name, 姓) 입력">
+                        <input class="formcontrol" type="text" placeholder="예약 시 입력한 영문/국문 이름(First Name, 名) 입력">
+                        <p class="loginbtn">예약조회</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer_wrap">
+            <ul class="info">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">국내여객운송약관</a></li>
+                <li><a href="#">항공교통이용자</a></li>
+                <li><a href="#">서비스 계획</a></li>
+                <li><a href="#">항공교통이용자 피해구제</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+            <ul class="other clearfix">
+                <li>
+                    <h1 class="footerlogo">logo</h1>
+                </li>
+                <li>
+                    <h4>예약문의</h4>
+                    <p>
+                        <span>1544.0080</span>
+                        <span>매일 09:00 ~ 18:00 연중무휴</span>
+                    </p>
+                </li>
+                <li>
+                    <h4>고객센터</h4>
+                    <p>
+                        <span>
+                            365일 운영시간에<br>
+                            순차적으로 답변드리겠습니다.
+                        </span>
+                    </p>
+                </li>
+                <li>
+                    <h4>이스타항공 SNS</h4>
+                    <p>
+                        <span>youtube</span>
+                        <span>facebook</span>
+                        <span>twitter</span>
+                    </p>
+                </li>
+            </ul>
+            <ul class="company">
+                <li>이스타항공(주)</li>
+                <li>대표이사 조중석</li>
+                <li>사업자 등록번호 401-81-32460</li>
+                <li>서울특별시 강서구 공항대로 236 이스타항공(주)</li>
+                <li>FAX 02-2665-7470</li>
+                <li>통신판매업 신고번호 2008-전북군산-0073호</li>
+                <li>개인정보보호책임자 이경민</li>
+                <li>COPYRIGHT © 2022 EASTARJET. ALL RIGHTS RESERVED</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
