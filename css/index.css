@@ -24,125 +24,17 @@ img {
     display: block;
     clear: both;
 }
-html{
+/* html{
     overflow: hidden;
     width: 100%;
     height: 100vh;
-}
+} */
 body {
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: -1px;
-    width: 100%;
-    height: 100vh
+    /* width: 100%;
+    height: 100vh */
 }
-
-
-
-
-
-#section .event_bottom .top .box .first {
-    /* position: relative; */
-    /* background-color: red; */
-}
-
-#section .event_bottom .top .box .first .bar .e_star {
-    position: absolute;
-    top: -50px;
-    left: 130px;
-
-    width: 300px;
-    height: 60px;
-
-    /* border: 1px solid red; */
-}
-
-#section .event_bottom .top .box .first .bar .e_star .gift2 {
-    /* 1 */
-    position: absolute;
-    top: -8px;
-    left: -76px;
-    animation: stars1 1s infinite alternate-reverse ;
-    /* transform:  scale(0.6); */
-}
-#section .event_bottom .top .box .first .bar .e_star .gift1 {
-    /* 2 */
-    position: absolute;
-    top: 0px;
-    left: -24px;
-    animation: stars3 1.4s infinite alternate-reverse ;
-}
-#section .event_bottom .top .box .first .bar .e_star .gift3 {
-    /* 3 */
-    position: absolute;
-    top: -3%;
-    right: 52%;
-    animation: stars2 1.6s infinite alternate-reverse;
-    /* transform:scale(1); */
-}
-
-#section .event_bottom .top .box .first .bar .e_star .gift4 {
-    /* 4 */
-    position: absolute;
-    top: 3%;
-    right: 34%;
-    animation: stars4 1.8s infinite alternate-reverse;
-}
-
-
-@keyframes stars1 {
-
-    /* 1 */
-    from {
-        transform: translateY(-22%) scale(0.6) ;
-    }
-
-    to {
-        transform: translateY(40%) scale(0.6);
-    }
-}
-
-@keyframes stars2 {
-
-    /* 3 */
-    from {
-        transform: translateY(-22%)  rotate(-7deg);
-    }
-
-    to {
-        transform: translateY(15%)  rotate(0deg);
-    }
-}
-
-@keyframes stars3 {
-
-    /* 2 */
-    from {
-        transform: translateY(-22%) scale(0.9) ;
-    }
-
-    to {
-        transform: translateY(15%)  scale(0.8) ;
-    }
-}
-
-@keyframes stars4 {
-    from {
-        transform: translateY(-22%) rotate(-7deg) scale(0.8) ;
-    }
-
-    to {
-        transform: translateY(15%) rotate(0deg) scale(0.8) ;
-    }
-}
-
-
-
-
-
-
-
-
-
 
 
 /* #header CSS */
@@ -666,7 +558,7 @@ body {
 
 /* #section .reserve .logintap CSS */
 #section .widget_conts .reserve .logintap {
-    width: 401px;
+    width: 404px;
     margin: 0px auto;
     margin-bottom: 25px;
 }
@@ -712,7 +604,7 @@ body {
 /* #section .widget_conts .reserve .loginconts CSS */
 /* #section .widget_conts .reserve .loginconts>li .sec01 CSS */
 #section .widget_conts .reserve .loginconts {
-    width: 401px;
+    width: 404px;
     margin: 0px auto;
 }
 
@@ -1298,8 +1190,10 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    /* background-color:#000; */
     background-color: transparent;
-    display: none;
+    /* display: none; */
+    /* z-index: 2; */
 }
 
 #section .main .rotate_conts {
@@ -1451,6 +1345,7 @@ body {
 #section .m_low {
     width: 100%;
     height: 100vh;
+    box-sizing:border-box;
 }
 
 #section .m_low .top {
@@ -1458,8 +1353,10 @@ body {
     height: 40px;
     margin: 0 auto;
     /* padding-top: 120px; */
-    padding-top: 180px;
+    /* padding-top: 180px; */
     position: relative;
+    top:120px;
+    left:0px;
 
 }
 
@@ -1523,7 +1420,7 @@ body {
     height: 570px;
     overflow: hidden;
     position: relative;
-    margin-top: 100px;
+    margin-top: 220px;
 }
 
 #section .m_low .big .photos {
@@ -1673,11 +1570,27 @@ body {
     background-color: #dadada15;
 }
 
+
 #section .event_bottom .top {
     width: 1280px;
     margin: 0 auto;
     position: relative;
-    padding-top: 180px;
+    /* padding-top: 160px; */
+    padding-top: 120px;
+}
+
+#section .event_bottom .buttonContainer{
+    display:none;
+}
+
+canvas{
+    z-index:10;
+    pointer-events:none;
+    position:fixed;
+    top:0;
+    left:0;
+    transform: scale(1.1);
+    display:none;
 }
 
 #section .event_bottom .top .name {
@@ -1722,6 +1635,7 @@ body {
     float: left;
 }
 
+
 /* #section .event_bottom .box .first .bar CSS */
 #section .event_bottom .box .first .bar {
     width: 500px;
@@ -1732,6 +1646,97 @@ body {
     border-radius: 30px;
     position: relative;
 }
+
+#section .event_bottom .top .box .first .bar .e_star {
+    position: absolute;
+    top: -50px;
+    left: 130px;
+
+    width: 300px;
+    height: 60px;
+
+    /* border: 1px solid red; */
+}
+
+#section .event_bottom .top .box .first .bar .e_star .gift2 {
+    /* 1 */
+    position: absolute;
+    top: -8px;
+    left: -76px;
+    animation: stars1 1s infinite alternate-reverse ;
+    /* transform:  scale(0.6); */
+}
+#section .event_bottom .top .box .first .bar .e_star .gift1 {
+    /* 2 */
+    position: absolute;
+    top: 0px;
+    left: -24px;
+    animation: stars3 1.4s infinite alternate-reverse ;
+}
+#section .event_bottom .top .box .first .bar .e_star .gift3 {
+    /* 3 */
+    position: absolute;
+    top: -3%;
+    right: 52%;
+    animation: stars2 1.6s infinite alternate-reverse;
+    /* transform:scale(1); */
+}
+
+#section .event_bottom .top .box .first .bar .e_star .gift4 {
+    /* 4 */
+    position: absolute;
+    top: 3%;
+    right: 34%;
+    animation: stars4 1.8s infinite alternate-reverse;
+}
+
+
+@keyframes stars1 {
+
+    /* 1 */
+    from {
+        transform: translateY(-22%) scale(0.6) ;
+    }
+
+    to {
+        transform: translateY(40%) scale(0.6);
+    }
+}
+
+@keyframes stars2 {
+
+    /* 3 */
+    from {
+        transform: translateY(-22%)  rotate(-7deg);
+    }
+
+    to {
+        transform: translateY(15%)  rotate(0deg);
+    }
+}
+
+@keyframes stars3 {
+
+    /* 2 */
+    from {
+        transform: translateY(-22%) scale(0.9) ;
+    }
+
+    to {
+        transform: translateY(15%)  scale(0.8) ;
+    }
+}
+
+@keyframes stars4 {
+    from {
+        transform: translateY(-22%) rotate(-7deg) scale(0.8) ;
+    }
+
+    to {
+        transform: translateY(15%) rotate(0deg) scale(0.8) ;
+    }
+}
+
 
 #section .event_bottom .box .first .bar>p {
     float: left;
@@ -1938,7 +1943,8 @@ body {
 
 /* #section .notice .notice_txt CSS */
 #section .notice .notice_txt {
-    padding-top: 180px;
+    /* padding-top: 180px; */
+    padding-top: 120px;
 }
 
 #section .notice .notice_txt>h2 {
@@ -2072,7 +2078,9 @@ body {
     width: 175px;
     margin: 0px auto;
     height: 51px;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    margin-top: 80px;
+    /* 위 수정함 */
     text-align: center;
     line-height: 51px;
     color: #fff;
@@ -2092,7 +2100,8 @@ body {
     width: 1280px;
     margin: 0 auto;
     /* position: relative; */
-    padding-top: 200px;
+    /* padding-top: 200px; */
+    padding-top: 120px;
 }
 
 #section .m_service>h1 {
