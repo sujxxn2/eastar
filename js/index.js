@@ -1,16 +1,36 @@
 $(document).ready(function(){
 
   let allContsbg = $(".main .all_conts_bg");
+  
 
   $(window).scroll(function(){
     let scroll = $(this).scrollTop();
     
     if(scroll > 937){
       $(".inner_wrap").addClass("current");
+      $(".topbtn").show();
     }else{
       $(".inner_wrap").removeClass("current");
+      $(".topbtn").hide();
     }
   });
+  $(window).scroll(function(){
+    let scroll = $(this).scrollTop();
+    
+    if(scroll > 1600 && scroll < 2500){
+      $("#canvas").show();
+    }else{
+      $("#canvas").hide();
+    }
+  });
+
+
+  $(".topbtn").click(function(){
+    $("html, body").animate({scrollTop:0},400);
+    return false;
+  });
+
+
 
   // inner_wrap gnb
   $(".gnb>li").mouseenter(function(){
@@ -141,8 +161,14 @@ $(document).ready(function(){
     
     allContsbg.click(function(){
       rotateContsOn.hide();
+    
     });
 
+  });
+
+  $(".tab_wrap").click(function(){
+    $("html, body").animate({scrollTop:"500px"},400);
+    return false;
   });
 
   // main panel1 cal
@@ -363,10 +389,14 @@ $(document).ready(function(){
     });
   });
 
+  function reAction(){
+    $("#startButton").trigger("click");
+    setTimeout(function(){
+    $("#stopButton").trigger("click");
+    }, 6000);
+    }
+    reAction();
 
 
+}); 
 
-
-
-
-});
