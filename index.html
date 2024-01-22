@@ -12,10 +12,12 @@
   <link rel="stylesheet" href="css/index.css">
   <script src="https://kit.fontawesome.com/f091d12e6a.js" crossorigin="anonymous"></script>
   <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/confetti_v2.js"></script>
   <script src="js/index.js"></script>
 </head>
 
 <body style="overflow-x: hidden; overflow-y: auto;">
+<!-- <body > -->
   <div id="header">
     <div class="inner_wrap">
       <div class="inner">
@@ -83,7 +85,8 @@
       <div class="all_conts_bg"></div>
       <div class="airp"></div>
       <div class="airp2"></div>
-
+      
+    <div class="tab_wrap">
       <ul class="tab clearFix">
         <li class="aaa tabOn">항공권 예약</li>
         <li class="aaa">예약 조회</li>
@@ -204,11 +207,10 @@
                 <li>
                   <h5>출발일</h5>
                   <select>
-                    <option>2024년 01월 19일</option>
-                    <option>2024년 01월 20일</option>
-                    <option>2024년 01월 21일</option>
                     <option>2024년 01월 22일</option>
                     <option>2024년 01월 23일</option>
+                    <option>2024년 01월 24일</option>
+                    <option>2024년 01월 25일</option>
                   </select>
                 </li>
                 <li>
@@ -237,14 +239,14 @@
                 <li class="cal">
                   <h5>출발일</h5>
                   <!-- <input type="text" placeholder="2024년 01월 19일"> -->
-                  <p><a href="#">2024년 01월 19일</a></p>
+                  <p><a href="#">2024년 01월 22일</a></p>
                 </li>
               </ul>
               <ul class="quick_tab_conts quick_tab_conts2 clearFix">
                 <li class="cal">
                   <h5>출발일</h5>
                   <!-- <input type="text" placeholder="2024년 01월 19일"> -->
-                  <p><a href="#">2024년 01월 19일</a></p>
+                  <p><a href="#">2024년 01월 22일</a></p>
                 </li>
                 <li>
                   <h5>편명</h5>
@@ -298,6 +300,7 @@
           </li>
         </ul>
       </div>
+    </div>
 
       <div class="widget_conts">
         <div class="reserve">
@@ -664,6 +667,12 @@
     </div>
     <!-- event_bottom -->
     <div class="event_bottom vvv">
+      <div class="buttonContainer">
+        <button class="canvasBtn" id="stopButton">Stop Confetti</button>
+        <button class="canvasBtn" id="startButton">Drop Confetti</button>	
+      </div>
+      <canvas id="canvas"></canvas>
+
       <div class="top">
         <div class="name">
           <p class="l_arrow"><img src="images/index/section/event/m_e01.png" alt="air"></p>
@@ -676,10 +685,10 @@
               <img src="images/index/section/event/clock.png" alt="clock">
               <div id="timer"></div>
               <div class="e_star">
-                <p class="gift1"><img src="/images/index/section/event/star02.png" alt="star">
-                <p class="gift2"><img src="/images/index/section/event/star02.png" alt="star">
-                <p class="gift3"><img src="/images/index/section/event/star02.png" alt="star">
-                <p class="gift4"><img src="/images/index/section/event/star02.png" alt="star">
+                <p class="gift1"><img src="images/index/section/event/star02.png" alt="star">
+                <p class="gift2"><img src="images/index/section/event/star02.png" alt="star">
+                <p class="gift3"><img src="images/index/section/event/star02.png" alt="star">
+                <p class="gift4"><img src="images/index/section/event/star02.png" alt="star">
               </div>
             </div>
             <div class="r_text">
@@ -734,10 +743,10 @@
             <i class="fa-solid fa-chevron-right"></i>
           </p>
         </div>
-        <!-- <div class="red_btn">
+        <div class="red_btn">
           <img src="images/index/section/event/m_03.png" alt="r_btn">
           <p>전체보기</p>
-        </div> -->
+        </div>
       </div>
     </div>
     <!-- notice -->
